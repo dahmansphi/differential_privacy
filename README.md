@@ -1,3 +1,5 @@
+![Screenshot of build-in functions of the protectai tool.](https://raw.githubusercontent.com/dahmansphi/differential_privacy_with_ai_and_ml/main/assets/privacy.jpg)
+
 
 > [!TIP]
 > This project is the technical implementation of the published paper [Review of Data Privacy Techniques: Concepts, Scenarios and Architectures, Simulations, Challenges, and Future Directions](https://dahmansphi.com/publications/).
