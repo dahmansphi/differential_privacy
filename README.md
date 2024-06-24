@@ -1,15 +1,16 @@
 
 > [!TIP]
-> This project is a complementary to the __Protect AI Model__ project that can be found in the [repo](https://github.com/dahmansphi/protectai). To this end, to understand the entire idea you shall make sure to read both documentations.
+> This project is the technical implementation of the published paper [Review of Data Privacy Techniques: Concepts, Scenarios and Architectures, Simulations, Challenges, and Future Directions](https://dahmansphi.com/publications/).
 
-# About the Package
+# About the Project
 ## Author's Words
-Welcome to **the first Edition of ATTACK AI MODEL SIMULATION- attackai Tool** official documentation. I am Dr. Deniz Dahman the creator of the BireyselValue algorithm and the author of this package. In the following section you will have a brief introduction on the principal idea of the __attackai__ tool. In addition, a reference to the academic publication on this potential type of __cyber attack__ and potential __defence__. Before going ahead, I would like to let you know that I have done this work as an independent scientist without any fund or similar capacity. 
-I am dedicated to proceeding and seek further improvement on the proposed method at all costs. To this end if you wish to contribute in any way to this work, please find further details  in the contributing section.  
+Welcome to the official documentation for **Review of Data Privacy Techniques: Concepts, Scenarios and Architectures, Simulations, Challenges, and Future Directions**. I am Dr. Deniz Dahman, the creator of the BireyselValue algorithm and the author of this project. The following section will provide a brief introduction to the core idea of the __project__, along with a reference to the academic publication. I would like to inform you that this work was conducted independently, without any funding or similar support. 
+
+I am committed to continuing and seeking further enhancements to the review paper. Should you wish to contribute to this work in any manner, please refer to the details in the contributing section.  
   
 ## Contributing 
 
-If you wish to contribute to the creator of this project and the author, you may want to check possible ways on: 
+If you're interested in supporting the creator and author of this project, you might consider exploring the various available options for contribution.
 
 > `To Contribute in any way possible, thank you, you can check` :
 
@@ -22,162 +23,32 @@ If you prefer *any other way of contribution*, please feel free to contact me di
 
 *Thank you*
 
-# Introduction
+# The Abstract
 
-## The Data poisoning
-The current revolution of the __AI framework__ has become almost the main element in every solution that we use daily. Many industries heavily rely on those AI models to generate responses accordingly. In fact, it has become a trend that once a product utilizes AI as its backend, then its potential to penetrate marketplace is substantially higher than the one doesn't.
+This review offers __a thorough introduction to the concept of privacy, focusing specifically on the application of differential privacy within machine learning__. Its primary goal is to elucidate the key facets of privacy when utilizing AI frameworks, thereby _facilitating researchers and students in gaining a coherent understanding from a singular resource_. Additionally, the project provides __lab implementations in Python for several key topics__. In essence, apart from presenting available open-source tools for privacy in machine learning, the author has chosen to demonstrate the core concepts of the abstract within a hypothetical setup environment. While the review does not guarantee mastery over every discussed topic, it aims to provide a substantial comprehension, enabling the reader to further explore specific areas related to the discourse on privacy in machine learning. The project is structured into sections as outlined below.
 
-This trend has pushed many industries to consider __the implementation of AI models__ in the tire of their business process. This rush is understandable from the way that those industries believe; for businesses to secure a place in today’s competitive market, they must catch up with the most recent advances in the realm of technology. However, one must ask what is this __AI problem solving paradigm__ anyway?  
+# Section 2:
+This section focuses on three core elements: data, AI frameworks, and privacy. __It seeks to establish a link between these components__, leading to the main emphasis—data privacy in the context of machine learning and AI frameworks.
 
-In my published project [the Big Bang of Data Science](https://dahmansphi.com/the-big-bang-of-data-science/) I do provide a comprehensive answer to this question, from abstract and concrete perspective. But let me just summaries both perspectives in a few lines. 
+# Section 3:
+Exploring the diverse techniques and methods for applying data privacy across various scenarios can be aided by numerous open-source tools. However, this project adopts a unique approach. __Rather than merely introducing the abstract concept and then recommending an existing tool for implementation, it constructs lab sessions using the Python programming language__. In each subsession, it builds upon the core principles of the abstract concept from the ground up and then simulates the results. This method ensures that the reader gains a solid understanding of both the mathematical and procedural aspects of the topic.
+The lab session will utilize a single dataset mentioned in the `data availability`; importantly, the nature of the dataset, including its field of origin or the types of features it contains, will not be a concern. This is because the paper intends to use the dataset solely as an illustrative example, and consequently, there will be no evaluation of outcome metrics such as accuracy, efficiency, or the like
 
-Basically, AI model is a mathematical tool, so to speak. It mainly relies on an important stage, __the training stage__. As a metaphor, imagine it as a human brain that learns over time from the surroundings and the circumstances where it lives. Those surroundings and circumstances are the cultures, beliefs, people, etc. Once this brain is shaped and formed, it starts to make decisions and offers answers. Yet, we from the outside start to judge those decisions and answers and the brain would react to those judgements.  
+# Section 4:
+The discussions in the previous sections (1 and 2) have underscored the significance of embedding privacy as a core element in the use of data for general analytics or predictive modeling within AI and ML frameworks. __This section will present detailed, motivating examples__ related to data privacy issues, followed by a laboratory simulation of a data privacy breach.
 
-AI models are mimicking such paradigm. The human brain is __the mathematical equation__ of the model, the surroundings and the circumstances are __the training samples__ that we feed to the mathematical equation to learn, the judgements by the surroundings are __the calculation of those misclassified cases__ which known as obtaining the derivatives. Obviously, we then __aim to have a model that can give accurate answers__ with a minimum level of mistakes.  
+# Section 5:
+As discussions around data privacy have intensified in recent years, _numerous approaches have been explored to address the issue from both theoretical and practical perspectives_. While these techniques may seem disparate at first glance, they are interconnected to some degree. _Differential Privacy stands out as a significant mathematical concept in this domain_. __This section will present the latest techniques for addressing data privacy concerns__. Importantly, the arrangement of these techniques is not presented as isolated topics but as a continuum of related subjects. Consequently, the ensuing subsections and simulated laboratories will be discussed in a logical sequence
 
-![training_ai_model](https://raw.githubusercontent.com/dahmansphi/attackai/main/assets/training_ai_model.gif) 
+# Section 6:
+Despite the promising mathematical representation of __differential privacy__, there are still challenges in the field today. This section discuss those challenges in details.
 
-Once the technical workflow of the AI is understood, it should be clear then that the __training samples__ from which the AI model learns are the most important element of this entire flow. This element can be thought of as the __adjudicator__ whether the model will __succeed or fail__. 
-To this end, such element is a target for __adversaries__ who aim to fail the model. If such __attack__ is successful, then it’s known as __data poisoning attack__.  
-
-```Data poisoning is a type of cyberattack in which an adversary intentionally compromises a training dataset used by an AI or machine learning (ML) model to influence or manipulate the operation of that model``` 
-
-Such type of attack can be done in several ways: 
-- [x] Intentionally injecting false or misleading information within the training dataset, 
-- [x] Modifying the existing dataset, 
-- [x] Deleting a portion of the dataset.  
-
-Unfortunately, such __cyber-attack__ could go undetected for so long due to the framework of the AI at the first place. Furthermore, __the lack of fundamental understanding__ of the AI black-box, and the __employing of ready-to-use AI models__ by industry practicians without the comprehensive understanding of the mathematics behind the entire framework.
-
-However, there are some signs that might lead to the observation that the __AI model__ is compromised. Some of those signs are: 
-
-1. __Model degradation__: Has the performance of the model inexplicably worsened over time?
-Unintended outputs	Does the model behave unexpectedly and produce unintended results that cannot be explained by the training team?
-2. __Increase in false positives/negatives__: Has the accuracy of the model inexplicably changed over time? Has the user community noticed a sudden spike in problematic or incorrect decisions?
-3. __Biased results__: Does the model return results that skew toward a certain direction or demographic (indicating the possibility of bias introduction)?
-4. __Breaches or other security events__: Has the organization experienced an attack or security event that could indicate they are an active target and/or that could have created a pathway for adversaries to access and manipulate training data?
-5. __Unusual employee activity__: Does an employee show an unusual interest in understanding the intricacies of the training data and/or the security measures employed to protect it?
-
-The following __gif__ illustrates the kind of data poisoning attack on __AI Model__. It basically shows how the __alphas or weights__ are influenced by the new training samples which the model uses __to update itself__.
-
-![training_ai_model](https://raw.githubusercontent.com/dahmansphi/attackai/main/assets/ai_attack_simulation.gif) 
-
-
-To this end, such matters must be considered by the company AI division once they decide to employ the __AI problem-solving paradigm__.   
-
-
-## attackai package __version__1.0
-To understand the consequence of such an attack, it would be great if available tools could simulate the attack itself. This is where I do introduce the __attackai__ tool. This tool basically illustrates two types of attacks: 
-
-1. __corrupt data sample attack__: in this type of attack the attacker manages to corrupt the data sample of __AI model__ during the stage of __AI continues learning__. Basically, the expected workflow of __AI model__ is that after building the first model, it should __continue__ learning from new samples, and as a result the alphas or as known __weights__ of the model will be updated accordingly. Thus, if a new patch of those samples is corrupted in any way, then the __new updated AI model__ will update the weights based on poisoned samples. This is where symptoms of __degraded AI results__ can be observed then.   
-
-2. __crazy the model__: this second type of attack is way dangerous than the first one. Let me give you an example, if I would teach the model that a certain image of __dog__ is a __dog label__ and another image of a __cat__ is a __cat label__ then the model will construct its internal __weights__ based on this information. If one manages to __swap__ such labels by classifying a __dog__ as a __cat__ and a __cat__ as a __dog__ then this is where the model could go __crazy__. 
-
-> [!IMPORTANT]
-> __This tool illustrates the prior two types of attack for an educational purpose ONLY. The author provides NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE__. 
-
-# Installation 
-> [!TIP]
-> The simulation using __attackai__ is done on a __binary class__ images dataset, referenced in the below section. The _gif_ illustrations shows the storyline as assumed.
-
-![storyline](https://raw.githubusercontent.com/dahmansphi/attackai/main/assets/storyline.gif)
-
-## Data Availability
-The NIH chest radiographs that support the findings of this project are publicly available at https://nihcc.app.box.com/v/ChestXray-NIHCC and https://www.kaggle.com/c/rsna-pneumonia-detection-challenge. The Indiana University Hospital Network database is available at https://openi.nlm.nih.gov/. The WCMC pediatric data that support the findings of this study are available in the identifier 10.17632/rscbjbr9sj.3
-
-## Project Setup
-### Story line
-Basically, the storyline of the simulation is simulated on a __chest X-ray dataset__, outlined [above](#data-availability). The outline of the story goes as follows: 
-
-1. A fictious healthcare center is operating as a __chest X-ray__ diagnosis place. 
-2. In its workflow, called the __old paradigm__, the case _person_ has a chest X-ray scan; then the __scanned image__ is delivered to a domain expert, the Pulmonologist, to examine the image; and finally, the results are presented to the case person. 
-3. The clinic decides to move to a __new paradigm__, by integrating a new layer for diagnosis that lays between the case input and the domain expert diagnosis. The new proposed block is to implement an __AI agent__ that essentially diagnosis the case and predict its label as __Normal or Pneumonia__, then that will pass to the domain expert to confirm. 
-
-### Environment Setup
-In the first phase the clinic creates the __AI Model__, that is by following: 
-1. Main folder that contains subfolders __(train, and test)__; in each there are subfolders of classes for __(normal and pneumonia)__ cases 
-2. The images basically are transformed into __tensors__ which then are fed into a neural network with x hidden layers, the system works until it produces the main predictive model __x-ray-ai.h5__ 
-3. This model contains the valid __ratios weights__ that done the math to make the predictions 
-
-### Pipeline Setup
-The AI team then decides to create the pipeline to update the mode as follows: 
-1. On a weekly basis the new cases are collected 
-2. Then the same setup as mentioned above is created for the folders 
-3. The original model then used to make the current update using the new batches of __x-ray images__ 
-4. Technically speaking, that new input will update the model in a way that change the model weights values 
-
-### AI Model Poisoning  
-If the adversary has access to the __weekly sources__ from where the model makes its update, then the model over time will have the bad results of any potential fails to __make the right predictions__. Assume the adversary has that access, then can utilize the __attackai__ to make the attack of any type as outlined in [type one attack](#type-one-attack) or [type two attack](#type-two-attack).
-
-## Install attackai
-
-> [!TIP]
-> make sure to create the project setup as outlined [above](#project-setup).
-
-to install the package all what you have to do:
-```
-pip install attackai
-```
-You should then be able to use the package. You may want to confirm the installation
-
-```
-pip show attackai
-```
-The result then shall be as:
-
-```
-Name: attackai
-Version: 1.0.0
-Summary: Simulation of poisoning attack on AI model
-Home-page: https://github.com/dahmansphi/attackai
-Author: Dr. Deniz Dahman's
-Author-email: dahmansphi@gmail.com
-```
-
-## Employ the attackai -**Conditions**
-
-> [!IMPORTANT]
-> It’s mandatory, to use the first edition of attackai, to make sure the __update__ folder that have the subfolders of the __normal and Pneumonia__ as illustrated in the gif above. 
-
-## Detour in the attackai package- Build-in
-Once your installation is done, and you have met all the conditions, then you may want to check 
-the build-in functions of the attackai and understand each.  
-Essentially, if you create an instance from the attackai as so: 
-
-```
-from attackai import AttackAI
-inst = AttackAI()
-```
-now this **inst** instance offers you access to those build in functions that you need. 
-this is a screenshot:
-
-![Screenshot of build-in functions of the attackai tool.](https://raw.githubusercontent.com/dahmansphi/attackai/main/assets/functions_aaim.png)
-
-Once you have attackai instance, here are the details of the right sequence to employ the attack:
-
-### type one attack:
-
-In this attack the aim of the adversary is __to corrupt__ the training sample. To illustrate that; you can first make use of the `explore_attack_t1()` function. The function takes two main args __path to the update folder__ and __size of the attack__. the later implies by how mush you wish to corrupt the image. In addtion, there is an optional arg that is the __stamp__ option, which offers to make stamp on the image which you attack. the follwoing graph illustrate that:
-
-![Screenshot of attack one no stamp.](https://raw.githubusercontent.com/dahmansphi/attackai/main/assets/attack_1_im_1.png)
-![Screenshot of attack one with stamp.](https://raw.githubusercontent.com/dahmansphi/attackai/main/assets/attack_1_im_2.png)
-
-once you justify the result you can __execute the attack__ using the `execute_attack_t1()`, the results of the attack is illustrated in the following graph:
-![Screenshot of attack one with stamp.](https://raw.githubusercontent.com/dahmansphi/attackai/main/assets/attack_1_im_3.png)
-
-### type two attack:
-In this attack the aim of the adversary is __to swap__ the contents of both classes. To illustrate that; you can first make use of the `explore_attack_t2()` function. The function takes ONE main arg __path to the update folder__. the follwoing graph illustrate that:
-
-![Screenshot of attack one no stamp.](https://raw.githubusercontent.com/dahmansphi/attackai/main/assets/attack_2_im_1.png)
-
-once you justify the result you can __execute the attack__ using the `execute_attack_t2()`. 
-
-## Conclusion on installation and employing 
-Once the attack is done, you need to observe the effect, that is the part where you need to check the documentation of the __protectai__ tool. In the documentation, first I will illustrate the result of both attacks, then I propose the method to make the defense from such attack.   
-
+# Section 7:
+This project conducted __an extensive survey on data privacy__. It provided a wide-ranging viewpoint, linking data, AI & ML frameworks, and privacy concerns. The review outlined two scenarios where privacy is compromised and explored different initiatives to tackle data privacy issues. __A notable aspect of this work was the in-depth analysis of the "Differential Privacy" framework__, a leading subject in current privacy research. Challenges and future prospects regarding the Differential Privacy (DP) framework were also examined. It has become evident that incorporating a privacy parameter into data usage for any purpose is crucial. The existing methods and frameworks, particularly the differential privacy framework, appear to be quite promising. It is anticipated that this framework will continue to evolve in the coming years and may become the new benchmark for data privacy. __Regardless of the advancements a framework makes, without public knowledge and understanding of privacy technicalities, which is difficult to expect from non-technical individuals, addressing privacy breaches becomes an almost unattainable goal__. This is because if people remain uninformed about the technical aspects of privacy concerning their data, they have no choice but to trust the curator's assurance that their privacy is intact. While this may be true, the question arises: if the curator uses the data entrusted to them without the explicit consent of the owner for their own benefit, can it be considered a breach of privacy? Lastly, this overview serves as a foundation for the "data privacy" community interested in developing various techniques for data protection. Moreover, it enables researchers to determine the most appropriate course of action to offer more precise alternatives in the field
 
 
 # Reference
 
-please follow up on the [publication](https://dahmansphi.com/publications/) in the website to find the academic [published paper](https://www.scienceopen.com/hosted-document?doi=10.14293/PR2199.000907.v1)
+please follow up on the [publications](https://dahmansphi.com/publications/) on the website to find the academic [published paper](https://dahmansphi.com)
+ 
  
