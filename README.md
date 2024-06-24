@@ -7,6 +7,11 @@
 > [!TIP]
 > The Lab associated with this project can be found at the provided repository [link](https://github.com/dahmansphi/differential_privacy_with_ai_and_ml/blob/main/lab/diff_privacy.ipynb)
 
+
+> [!TIP]
+> __Availability of supporting data__: The following data support the findings of this study: The Heart Failure Clinical Records dataset available in [UCI Machine Learning Repository] at https://doi.org/10.24432/C5Z89R ,
+
+
 # About the Project
 ## Author's Words
 Welcome to the official documentation for **Review of Data Privacy Techniques: Concepts, Scenarios and Architectures, Simulations, Challenges, and Future Directions**. I am Dr. Deniz Dahman, the creator of the BireyselValue algorithm and the author of this project. The following section will provide a brief introduction to the core idea of the __project__, along with a reference to the academic publication. I would like to inform you that this work was conducted independently, without any funding or similar support. 
