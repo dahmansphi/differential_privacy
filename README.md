@@ -1,4 +1,4 @@
-![Screenshot of build-in functions of the protectai tool.](https://raw.githubusercontent.com/dahmansphi/differential_privacy_with_ai_and_ml/main/assets/privacy.jpg)
+![Screenshot of build-in functions of the protectai tool.](https://raw.githubusercontent.com/dahmansphi/differential_privacy_with_ai_and_ml/main/assets/privacy_upd.jpg)
 
  
 > [!TIP]
