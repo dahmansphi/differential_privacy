@@ -3,6 +3,7 @@
  
 > [!TIP]
 > This project is the technical implementation of the published paper [Review of Data Privacy Techniques: Concepts, Scenarios and Architectures, Simulations, Challenges, and Future Directions](https://dahmansphi.com/publications/).
+
 > The Lab associated with this project can be found at the provided repository [link](https://github.com/dahmansphi/differential_privacy_with_ai_and_ml/blob/main/lab/diff_privacy.ipynb)
 
 # About the Project
