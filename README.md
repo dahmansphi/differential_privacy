@@ -12,6 +12,9 @@
 > __Availability of supporting data__: The following data support the findings of this study: The Heart Failure Clinical Records dataset available in [UCI Machine Learning Repository] at https://doi.org/10.24432/C5Z89R ,
 
 
+> [!TIP]
+> __Training Videos__: You can watch a concise series of training videos that demonstrate each section of the published academic paper, with the author delivering the content. [Training Program](https://www.youtube.com/playlist?list=PLhej4kLpU4j1hwYLVCjQYeGvnTUaJ7_JG)
+
 # About the Project
 ## Author's Words
 Welcome to the official documentation for **Review of Data Privacy Techniques: Concepts, Scenarios and Architectures, Simulations, Challenges, and Future Directions**. I am Dr. Deniz Dahman, the creator of the BireyselValue algorithm and the author of this project. The following section will provide a brief introduction to the core idea of the __project__, along with a reference to the academic publication. I would like to inform you that this work was conducted independently, without any funding or similar support. 
