@@ -62,6 +62,6 @@ This project conducted __an extensive survey on data privacy__. It provided a wi
 
 # Reference
 
-please follow up on the [publications](https://dahmansphi.com/publications/) on the website to find the academic [published paper](https://dahmansphi.com)
+please follow up on the [publications](https://dahmansphi.com/publications/) on the website to find the academic [published paper](https://www.scienceopen.com/hosted-document?doi=10.14293/PR2199.000936.v1)
  
  
